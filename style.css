@@ -1,0 +1,80 @@
+
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(16,29,44,.70), rgba(16,29,44,.70)),
+    url("https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_960_720.jpg")  no-repeat;
+    position: relative;
+    background-size: cover;  
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.container h1 {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: yellow !important; 
+    letter-spacing: 3px;
+    font-size: 3.4rem;
+
+}
+
+.hero-text {
+    background-color:rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+    
+}
+
+.hero-text h2 {
+    color: yellow;
+    font-size: 2rem;
+}
+.hero-text h4 {
+    color: white;
+    font-size: 1rem;
+}
+.hero-text button {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.hamburger-menu {
+    position: fixed;
+    font-size: 2rem;
+    top: 20px;
+    right: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+.fa-bars {
+    display: block;
+    
+}
+.fa-times {
+    display:none;
+}
+
+.fa-bars.open {
+    display: none;
+}
+.fa-times.open{
+    display: block;
+}
+
+
