@@ -7,44 +7,49 @@ header {
     url("https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_960_720.jpg")  no-repeat;
     position: relative;
     background-size: cover;  
-    background-position: center;
     font-family: 'Montserrat', sans-serif;
-
+background-position: center;
 }
 
 
 .container {
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    margin: 20px auto;
 }
 .navbar-brand h1 {
     position: absolute;
     top: 40px;
-    left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Dancing Script', cursive;
     color: yellow !important; 
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     font-size: 3.4rem;
 
 }
 
 .hero-text {
     background-color:rgba(255,255,255,0.1);
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    max-width: 400px;
+    
     
 }
 
 .hero-text h2 {
     color: yellow;
     font-size: 2rem;
+    line-height: 3rem;
 }
 .hero-text h4 {
     color: white;
     font-size: 1rem;
+    line-height: 1.6rem;
+
 }
 .hero-text button {
     display: block;
@@ -96,6 +101,32 @@ header {
     transition: .5s;
 }
 
+.nav.open {
+    transform: translateY(0);
+    transition: .5s;
+
+}
+
+.nav-link a{
+    font-size: 30px;
+    color: yellow;    
+    letter-spacing: 3px;
+}
+
+ .nav-link a:hover {
+     text-decoration: none;
+     color: rgb(202, 202, 20);
+}
+
+.socials-info i {
+    font-size: 1.4rem;
+}
+
+.contact-info {
+    line-height: 30px;
+}
+
+
 @media (min-width: 776px) {
     .nav {
         
@@ -115,24 +146,16 @@ header {
     }
     .navbar-brand h1 {
         top:120px;
+        transform: translateX(0);
+        left: 20px;
+        font-size: 3.8rem;
+                
+    }
+    header {
+        background-position: top;
     }
 
 }
 
-.nav.open {
-    transform: translateY(0);
-    transition: .5s;
 
-}
-
-.nav-link a{
-    font-size: 30px;
-    color: yellow;    
-    letter-spacing: 3px;
-}
-
- .nav-link a:hover {
-     text-decoration: none;
-     color: rgb(202, 202, 20);
-}
 
