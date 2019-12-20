@@ -4,15 +4,20 @@ header {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    position: relative;
+    
     
     nav {
-        background-color: $color-light;
-        padding: 30px 20px;
+        background-color: $light;
+        padding: 10px 20px;
         transition: .5s;
+        z-index: 10;
         
         @media(min-width: 768px) {
             position: fixed;
             width: 100%;
+            padding: 30px 20px;
+
             
             &.fixed {
                 padding: 5px 20px
@@ -157,5 +162,36 @@ header {
                 }        
             }            
         }
+    }
+    
+    .heading {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        max-width: 1170px;
+
+        .title {
+            font-family: $font-roboto;
+            color: $light;
+            text-align: center;
+            line-height: 50px;
+            font-size: 38px;
+            margin-bottom: 70px;
+            font-weight: 500;
+
+            @media(min-width: 768px) {
+                font-size: 55px;
+                line-height: 70px;
+            margin-bottom: 100px;                
+            }
+        }
+        // .see-more {
+        // }
     }
 }
