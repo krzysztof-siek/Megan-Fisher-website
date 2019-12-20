@@ -7,13 +7,29 @@ header {
     
     nav {
         background-color: $color-light;
-        padding: 20px;
-    
+        padding: 30px 20px;
+        transition: .5s;
+        
+        @media(min-width: 768px) {
+            position: fixed;
+            width: 100%;
+            
+            &.fixed {
+                padding: 5px 20px
+            }
+        }
+            
         .nav-button {        
             position: static;
             top: 20px;
             right: 20px;
             z-index: 1000;
+            
+            &.button-fixed {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+            }
 
                 .fa-bars {
                     display: block;                
@@ -32,24 +48,24 @@ header {
            @media(min-width: 768px) {
                display: none;
            }
+           
         }
 
         .nav-brand {
             justify-self: flex-start;
             z-index: 2;
-        }
-  
+        }  
 
         .nav-links {      
             position: fixed;
-            background-color: $light-trans;
+            background: $light-trans;
             padding-top: 20px;
             width: 100%;
             top:0;
             left:0;
             list-style-type: none;
             transform: translateY(-100%);
-            transition: .5s;
+            transition: .5s;           
 
             @media(min-width: 768px) {
                 position: static;
@@ -82,7 +98,7 @@ header {
 
                    &:nth-child(7) {
                        display: block;
-                       margin-left: 30px;
+                       margin-left: 25px;
 
                        &:hover {
                            transform: scale(1.1);
@@ -91,6 +107,7 @@ header {
 
                    &:nth-child(8) {
                        display: block;
+                       margin-right: 40px;
 
                        &:hover {
                         transform: scale(1.1);

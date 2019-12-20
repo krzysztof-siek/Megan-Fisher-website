@@ -19,7 +19,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
 
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+        const nav = document.querySelector('#nav')
+        const navButton = document.querySelector('.nav-button');
+        if (scrollY > 50) {
+            nav.classList.add('fixed')
+            navButton.classList.add('button-fixed')
+        } else {
+            nav.classList.remove('fixed')
+            navButton.classList.remove('button-fixed')
+        }
 
+    })
 
 
 

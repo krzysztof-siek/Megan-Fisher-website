@@ -57,7 +57,19 @@ header {
 
 header nav {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    position: fixed;
+    width: 100%;
+  }
+  header nav.fixed {
+    padding: 5px 20px;
+  }
 }
 
 header nav .nav-button {
@@ -65,6 +77,12 @@ header nav .nav-button {
   top: 20px;
   right: 20px;
   z-index: 1000;
+}
+
+header nav .nav-button.button-fixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 header nav .nav-button .fa-bars {
@@ -96,7 +114,8 @@ header nav .nav-brand {
 
 header nav .nav-links {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.9)));
+  background: linear-gradient(white, rgba(255, 255, 255, 0.9));
   padding-top: 20px;
   width: 100%;
   top: 0;
@@ -153,7 +172,7 @@ header nav .nav-links .nav-item:nth-child(8) {
   }
   header nav .nav-links .nav-item:nth-child(7) {
     display: block;
-    margin-left: 30px;
+    margin-left: 25px;
   }
   header nav .nav-links .nav-item:nth-child(7):hover {
     -webkit-transform: scale(1.1);
@@ -161,6 +180,7 @@ header nav .nav-links .nav-item:nth-child(8) {
   }
   header nav .nav-links .nav-item:nth-child(8) {
     display: block;
+    margin-right: 40px;
   }
   header nav .nav-links .nav-item:nth-child(8):hover {
     -webkit-transform: scale(1.1);
