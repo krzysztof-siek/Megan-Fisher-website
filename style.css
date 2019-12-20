@@ -57,7 +57,7 @@ header {
 
 header nav {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 20px;
 }
 
 header nav .nav-button {
@@ -168,6 +168,12 @@ header nav .nav-links .nav-item:nth-child(8) {
   }
 }
 
+@media (min-width: 1200px) {
+  header nav .nav-links .nav-item {
+    padding: 0 20px;
+  }
+}
+
 header nav .nav-links .nav-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -178,6 +184,27 @@ header nav .nav-links .nav-link {
 
 header nav .nav-links .nav-link.active {
   color: #2888e2;
+  position: relative;
+}
+
+header nav .nav-links .nav-link.active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 120%;
+  -webkit-transform: translate(-10%, 5px);
+          transform: translate(-10%, 5px);
+  background-color: #2888e2;
+}
+
+header nav .nav-links .nav-link.active:hover:after {
+  background-color: #82baee;
+}
+
+header nav .nav-links .nav-link.active:hover {
+  color: #82baee;
 }
 
 header nav .nav-links .nav-link:hover {
