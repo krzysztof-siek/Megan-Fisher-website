@@ -18,16 +18,20 @@ body {
     border: none;
     font-family: $font-openSans;
     text-transform: uppercase;
-    letter-spacing: 1px;
     box-shadow: 3px 2px 4px rgba(24, 76, 125, 0.75);
-    padding: 15px 20px;
+    padding: 10px 15px;
     margin: 10px;
-    cursor: pointer;   
+    cursor: pointer;  
+    @media(min-width: 768px){
+        padding: 15px 20px;
+        margin: 20px;
+    }
 }
 
 .btn-primary {
     background-color: $blue;
     color: $light;
+    align-self: flex-start;
     &:hover {
         background-color: darken($blue, 10%);
     }
@@ -54,5 +58,27 @@ body {
     @media(min-width: 768px){
         flex-direction: row;
         padding-top: 60px;
+        padding-bottom: 60px;
     }
+}
+
+.title {
+    color: $dark;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    &.light {
+        color: $light;
+        
+    }
+}
+.info {
+    margin: 15px 0;
+}
+
+.cont {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0 ;
 }

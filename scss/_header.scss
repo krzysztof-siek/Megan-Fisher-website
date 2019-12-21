@@ -58,7 +58,7 @@ header {
 
         .nav-brand {
             justify-self: flex-start;
-            z-index: 2;
+            z-index: 3;
         }  
 
         .nav-links {      
@@ -83,7 +83,9 @@ header {
             }
 
             &.nav-open {
-                transform: translateY(20%);              
+                transform: translateY(0%); 
+                padding-top: 50px;  
+                z-index: 2;           
             }
           
             .nav-item {
@@ -191,7 +193,6 @@ header {
             margin-bottom: 100px;                
             }
         }
-        // .see-more {
-        // }
+        
     }
 }
