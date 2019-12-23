@@ -469,7 +469,7 @@ header .heading .title {
 .portfolio .row {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .portfolio .nav-links {
@@ -488,6 +488,14 @@ header .heading .title {
   text-decoration: none;
   color: #333333;
   text-transform: uppercase;
+}
+
+.portfolio .nav-links .nav-link.active {
+  color: #2888e2;
+}
+
+.portfolio .nav-links .nav-link.active:hover {
+  color: #82baee;
 }
 
 .portfolio .nav-links .nav-link:hover {
@@ -527,6 +535,8 @@ header .heading .title {
 
 .portfolio .grid-container .card {
   background-color: #f1f1f2;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .portfolio .grid-container .card .card-img {
@@ -551,21 +561,6 @@ header .heading .title {
   transition: 0.5s;
 }
 
-.portfolio .grid-container .card .card-img:hover .horizontal-line {
-  width: 100px;
-  height: 1px;
-}
-
-.portfolio .grid-container .card .card-img:hover .vertical-line {
-  width: 1px;
-  height: 100px;
-}
-
-.portfolio .grid-container .card .card-img:hover:after {
-  width: 100%;
-  height: 100%;
-}
-
 .portfolio .grid-container .card .card-img .horizontal-line {
   position: absolute;
   top: 50%;
@@ -574,10 +569,10 @@ header .heading .title {
           transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 100;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .portfolio .grid-container .card .card-img .vertical-line {
@@ -588,10 +583,10 @@ header .heading .title {
           transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 100;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .portfolio .grid-container .card .card-content {
@@ -602,6 +597,8 @@ header .heading .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .portfolio .grid-container .card .card-content .text .title {
@@ -609,11 +606,17 @@ header .heading .title {
   color: #2a2a2a;
   font-weight: bold;
   letter-spacing: 0.8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.portfolio .grid-container .card .card-content .text .title-small {
+.portfolio .grid-container .card .card-content .text .small {
   color: #7f7f7f;
   font-size: 14px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .portfolio .grid-container .card .card-content .icons {
@@ -627,7 +630,129 @@ header .heading .title {
 }
 
 .portfolio .grid-container .card .card-content .icons .eye, .portfolio .grid-container .card .card-content .icons .love {
-  padding: 10px;
+  padding: 5px;
   color: #666666;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.portfolio .grid-container .card .card-content .icons .eye i, .portfolio .grid-container .card .card-content .icons .love i {
+  padding: 5px 5px;
+}
+
+.portfolio .grid-container .card:hover {
+  background-color: #2888e2;
+}
+
+.portfolio .grid-container .card:hover .horizontal-line {
+  width: 80px;
+  height: 1px;
+}
+
+.portfolio .grid-container .card:hover .vertical-line {
+  width: 1px;
+  height: 80px;
+}
+
+.portfolio .grid-container .card:hover :after {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .grid-container .card:hover .title {
+  color: #ffffff !important;
+}
+
+.portfolio .grid-container .card:hover .small, .portfolio .grid-container .card:hover .eye, .portfolio .grid-container .card:hover .love {
+  color: #ffffff !important;
+}
+
+.banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("./img/bannerBg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./img/bannerBg.png");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    padding: 150px;
+  }
+}
+
+.banner .banner-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .banner .banner-text-wrapper {
+    padding: 40px 80px;
+    max-width: 50%;
+  }
+}
+
+.banner .banner-text-wrapper .main-text {
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: thin;
+  letter-spacing: 8.8px;
+}
+
+@media (min-width: 768px) {
+  .banner .banner-text-wrapper .main-text {
+    padding-bottom: 20px;
+  }
+}
+
+.banner .banner-text-wrapper .secondary-text {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+  .banner .banner-text-wrapper .secondary-text {
+    padding-bottom: 20px;
+  }
+}
+
+.banner .banner-text-wrapper .small-text {
+  color: #2888e2;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 5px;
 }
 /*# sourceMappingURL=style.css.map */
