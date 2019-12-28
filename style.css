@@ -464,6 +464,7 @@ header .heading .title {
 
 .portfolio {
   padding: 100px 0;
+  padding-bottom: 0;
 }
 
 .portfolio .row {
@@ -754,5 +755,107 @@ header .heading .title {
   font-size: 12px;
   text-align: center;
   letter-spacing: 5px;
+}
+
+.team {
+  background-color: #f1f1f2;
+  padding: 100px 0;
+  overflow-x: hidden;
+}
+
+.team .team-cont {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .team .team-cont {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .team .team-cont {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team .row {
+  width: 100%;
+  text-align: center;
+}
+
+.team .row h3 {
+  color: #333333;
+}
+
+.team .row p {
+  color: #959595;
+}
+
+.team .card {
+  background-color: #243130;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 350px;
+  max-width: 500px;
+  margin: 20px;
+  margin-top: 150px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.team .card:hover {
+  background-color: #2888e2;
+}
+
+.team .card .card-info {
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  height: 80px;
+}
+
+.team .card .card-info .person-details {
+  height: 100%;
+  width: 100%;
+}
+
+.team .card .card-info .person-details .team-name {
+  color: #2888e2;
+  padding: 16px 0 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.team .card .card-info .person-details .team-position {
+  padding: 0px 0 20px 0;
+  color: #666666;
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
