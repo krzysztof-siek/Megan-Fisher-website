@@ -775,6 +775,7 @@ header .heading .title {
   text-align: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  overflow-x: hidden;
 }
 
 @media (min-width: 992px) {
@@ -825,22 +826,30 @@ header .heading .title {
   margin-top: 150px;
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
 }
 
-.team .card:hover {
-  background-color: #2888e2;
+.team .card .team-img {
+  position: absolute;
+  left: 50%;
+  bottom: 78px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .team .card .card-info {
+  position: relative;
   width: 100%;
   background-color: #ffffff;
   text-align: center;
   height: 80px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .team .card .card-info .person-details {
-  height: 100%;
-  width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .team .card .card-info .person-details .team-name {
@@ -857,5 +866,49 @@ header .heading .title {
   font-size: 13px;
   font-weight: 300;
   opacity: 1;
+}
+
+.team .card .card-info .socials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  height: 80px;
+}
+
+.team .card .card-info .socials i {
+  font-size: 24px;
+  color: #666666;
+  padding: 0 10px;
+}
+
+.team .card .card-info .socials i:hover {
+  color: #2888e2;
+}
+
+.team .card:hover {
+  background-color: #2888e2;
+}
+
+.team .card:hover .person-details {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.team .card:hover .socials {
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

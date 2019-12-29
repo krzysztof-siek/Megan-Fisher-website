@@ -10,6 +10,8 @@
        justify-content: space-evenly;
        text-align: center;
        grid-template-columns: 1fr;
+       overflow-x: hidden;
+
        @media(min-width: 992px) {
            grid-template-columns: repeat(2, 1fr);
        }
@@ -40,24 +42,33 @@
     margin: 20px;
     margin-top: 150px;
     transition: .5s;
+    position: relative;
     
-    &:hover {
-        background-color: $blue;
-      
+    .team-img {
+        position: absolute;
+        left: 50%;
+        bottom: 78px;
+        transform: translateX(-50%);
     }
+  
     
    
   
     .card-info {
+        position: relative;
         width: 100%;
         background-color: $light;        
         text-align: center;    
         height: 80px;   
-        
+        width: 100%;
+        overflow: hidden;
+       
 
         .person-details {
-            height: 100%;
-            width: 100%;
+            // height: 100%;
+            // width: 100%;
+            transition: .5s;
+
           
         .team-name {
             color: $blue;
@@ -75,19 +86,38 @@
         }
     }
 
-        // .socials {
-        //     color: black;
-        //     width: 100%;
-        //     display: flex;
-        //     justify-content: space-evenly;
-        //     // height: 200px;
-        //    height: 80px;
+        .socials {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            color: black;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: .5s;
+           height: 80px;
             
-        //     i {
-        //         font-size: 24px;
-        //         color: $grey;
-        //     }
-        // }
+            i {
+                font-size: 24px;
+                color: $grey;
+                padding: 0 10px;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    &:hover {
+        background-color: $blue;
+        .person-details {
+            transform: translateY(100%);
+        }
+        .socials {
+            transform: translate(-50%, -10%);
+            color: red;
+        }
+      
     }
  }
 }
