@@ -33,6 +33,46 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     })
 
+//  TO CALE DO DOKONCZENIA, ZEBY POBIERALO INFO Z OSOBNEGO JSONA O OSOBIE I WYSWIETLALO
+//  info-open team card
+// const cards = document.querySelectorAll('.team-card');
+
+// Pobrać każdą kartę osobno żeby łatwiej czytać z której karty jest kliknięcie i text wyświetlać
+
+// hoverIn = (e) => {
+//     const infoCont = document.querySelector('.info-container');
+//     infoCont.classList.add('info-open')
+//     let contText = document.querySelector(".info-cont-text")
+//     console.log(e.target)
+    // if(e.target.classList.value.includes("team-card-3")) {
+    //     contText.textContent = "Tahmid"
+    //     console.log(e.target.classList.value)
+    // } else if(e.target.classList.value.includes("team-card-2")) {
+    //     contText.textContent = "Mohammad"
+    //     console.log(e.target.classList.value)
+
+    // } else if (e.target.classList.value.includes("team-card-1")) {
+    //     contText.textContent = "Shanruk"
+    //     console.log(e.target.classList.value)
+
+    // } else {
+    //     contText.textContent = "Somethink wrong"
+    //     console.log(e.target.classList.value)
+
+
+    // }
+    
+// }
+
+// hoverOut = () => {
+//     const infoCont = document.querySelector('.info-container');
+//     infoCont.classList.remove('info-open')
+// }
+
+// cards.forEach(card => card.addEventListener('click', hoverIn));
+// cards.forEach(card => card.addEventListener('mouseout', hoverOut));
+    
+// KONIEC!!!
 
 
 
