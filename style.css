@@ -1058,4 +1058,206 @@ header .heading .title {
 .opinion .cytat-subtext span {
   color: #2888e2;
 }
+
+.purchase {
+  background-color: #2888e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .purchase {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.purchase::after {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  content: "";
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  height: 20px;
+  width: 20px;
+  background-color: #2888e2;
+}
+
+.purchase .main-purchase {
+  color: #ffffff;
+  font-size: 24px;
+  padding: 60px;
+}
+
+.purchase .purchase-btn {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #2888e2;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.pricing {
+  padding: 100px 20px;
+  background-color: #f1f1f2;
+}
+
+.pricing .pricing-card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+
+@media (min-width: 992px) {
+  .pricing .pricing-card-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing .pricing-card-container .card {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.pricing .pricing-card-container .card .card-title, .pricing .pricing-card-container .card .card-price {
+  color: #ffffff;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pricing .pricing-card-container .card .card-title .price, .pricing .pricing-card-container .card .card-price .price {
+  font-size: 40px;
+}
+
+.pricing .pricing-card-container .card .card-title {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.pricing .pricing-card-container .card .card-title-one {
+  background-color: #ea5974;
+}
+
+.pricing .pricing-card-container .card .card-price-one {
+  background-color: #f5617d;
+}
+
+.pricing .pricing-card-container .card .card-title-two {
+  background-color: #1b76cc;
+  position: relative;
+}
+
+.pricing .pricing-card-container .card .card-title-two::after {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "Most Popular";
+  color: red;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.pricing .pricing-card-container .card .card-price-two {
+  background-color: #2888e2;
+}
+
+.pricing .pricing-card-container .card .card-title-three {
+  background-color: #5cb1a1;
+}
+
+.pricing .pricing-card-container .card .card-price-three {
+  background-color: #74c8b8;
+}
+
+.pricing .pricing-card-container .card .card-content {
+  widows: 100%;
+  text-align: center;
+  color: #666666;
+}
+
+.pricing .pricing-card-container .card .card-content .features {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px 0 10px 0;
+}
+
+.pricing .pricing-card-container .card .card-content .product {
+  font-weight: 300;
+  padding: 10px 50px;
+}
+
+.pricing .pricing-card-container .card .card-content .product:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing {
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  margin: 30px auto;
+  letter-spacing: 1.4px;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-one {
+  background-color: #f5617d;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-one:hover {
+  background-color: #f23156;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-two {
+  background-color: #1b76cc;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-two:hover {
+  background-color: #155c9f;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-three {
+  background-color: #5cb1a1;
+}
+
+.pricing .pricing-card-container .card .card-content .btn-pricing-three:hover {
+  background-color: #479385;
+}
 /*# sourceMappingURL=style.css.map */

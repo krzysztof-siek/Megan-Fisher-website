@@ -1,0 +1,121 @@
+.pricing {
+    
+    padding: 100px 20px;
+    background-color: $grey2;
+
+    .pricing-card-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        @media(min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+
+        }
+
+    .card {
+        background-color: $light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+      
+        .card-title, .card-price {
+            color: $light;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            .price {
+                font-size: 40px;
+            }
+        }
+        .card-title {
+            
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+        }
+        .card-title-one {
+           background-color: #ea5974; 
+        }
+        .card-price-one {
+            background-color:#f5617d;;
+        }
+        .card-title-two {
+            background-color: #1b76cc;
+            position: relative;
+            &::after {
+                position: absolute;
+                top:-18px;
+                left:50%; 
+                transform: translateX(-50%);           
+                content: "Most Popular";
+                color: red;
+                font-weight: bold;
+                letter-spacing: 2px;
+                
+            }
+        }
+        
+        .card-price-two {
+            background-color: #2888e2;
+        }
+        .card-title-three {
+            background-color: #5cb1a1;
+        }
+        .card-price-three {
+            background-color: #74c8b8;
+        }
+        
+        .card-content {
+            widows: 100%;
+            text-align: center;
+            color: #666666;
+            .features {
+                font-weight: 700;
+                font-size: 20px;
+                padding: 20px 0 10px 0;
+            }
+            .product {
+                
+                font-weight: 300;
+               padding: 10px 50px;   
+               &:nth-child(odd) {
+                background-color: #f8f8f8;
+               }
+                   
+            }
+            .btn-pricing {
+                color: $light;
+                padding: 10px 20px;
+                border: 1px solid $light;
+                margin: 30px auto; 
+                letter-spacing: 1.4px;               
+               
+            }
+            .btn-pricing-one {
+                background-color: #f5617d;
+                &:hover {
+                    background-color: darken(#f5617d, 10%);
+                }
+            }
+            .btn-pricing-two {
+                background-color: #1b76cc;
+                &:hover {
+                    background-color: darken(#1b76cc, 10%);
+                }
+            }
+            .btn-pricing-three {
+                background-color: #5cb1a1;
+                &:hover {
+                    background-color: darken(#5cb1a1, 10%);
+                }
+            }
+        }
+    }
+    }
+}
