@@ -887,6 +887,7 @@ header .heading .title {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   overflow-x: hidden;
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -1024,28 +1025,60 @@ header .heading .title {
 }
 
 .team .info-container {
-  padding: 20px;
+  padding: 40px 60px;
   margin-top: 50px;
   background-color: #2888e2;
   color: #ffffff;
-  visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: .3s;
-  transition: .3s;
-  position: relative;
 }
 
-.team .info-container.info-open {
-  visibility: visible;
+.team .info-container .info .info-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.team .info-container .info .info-position {
+  margin-bottom: 20px;
+}
+
+.team .info-container .skills {
+  padding: 30px;
+}
+
+.team .info-container .skills .adobe {
+  margin-bottom: 5px;
+}
+
+.team .info-container .skills .border {
+  border: 1px solid white;
+  height: 6px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.team .info-container .skills .border .photoshop {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+}
+
+.team .info-container .skills .border .ilustrator {
+  background-color: white;
+  width: 90%;
+  height: 100%;
+}
+
+.team .info-container .skills .border .indesign {
+  background-color: white;
+  width: 95%;
+  height: 100%;
 }
 
 .team .info-container::after {
