@@ -75,6 +75,51 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // KONIEC!!!
 
 
+// Slider 
+let images = [
+    "./img/cust-1.png", 
+    "./img/cust-2.png", 
+    "./img/cust-3.png",
+    "./img/cust-4.png"
+ ];
 
+ let sliderText = [
+     "Awesome Design and great support ! Highly recommend",
+     "Nice, Highly recommend So nisi elit consequat",
+      "ipsum, nec sagittis sem nibh id elit duis",
+      "sed odio sit amet nibh. sagittis sem"
+ ]
+
+ const next = document.querySelector('.next');
+ const prev = document.querySelector('.prev');
+
+ let num = 0;
+
+ function nextSlide() {
+     let slider = document.querySelector('.mySlider');
+     let text = document.querySelector('.slider-text')
+         num++;
+     if ( num >= images.length ) {
+        num = 0;
+      }
+      slider.src = images[num];
+      text.textContent = sliderText[num]
+    }
+ 
+ function prevSlide() {
+    let slider = document.querySelector('.mySlider');
+    let text = document.querySelector('.slider-text')
+
+    num--;
+    if ( num < 0 ) {
+      num = images.length-1;
+    }
+    slider.src = images[num];
+    text.textContent = sliderText[num]
+
+  }
+
+  next.addEventListener('click', nextSlide)
+  prev.addEventListener('click', prevSlide)
 
 });

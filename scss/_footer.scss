@@ -17,6 +17,9 @@
             
             img {
                 width: 49%;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
         .foot-title {
@@ -77,4 +80,10 @@
             }
         }
     }
+}
+.copyright {
+    padding: 20px;
+    text-align: center;
+    background-color: $dark2;
+    color:$grey;
 }
