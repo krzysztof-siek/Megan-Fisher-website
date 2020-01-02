@@ -89,3 +89,21 @@ body {
     width: 100%;
     text-align: center;
 }
+
+.grid-cont {
+        width:100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @media(min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media(min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+} 

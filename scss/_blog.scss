@@ -1,0 +1,99 @@
+.blog {
+    background-color: $grey2;;
+    padding: 100px 20px;
+
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        background-color: $light;
+        padding-bottom: 50px;
+        .img {
+            width: 100%;
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                img {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .socials {
+                position: absolute;
+                bottom: 20px;
+                left:50%;
+                transform: translateX(-50%);
+                color:$light;
+                display: flex;
+                .comment, .likes, .share {
+                    display: flex;
+                    background-color: $blue;
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    margin: 5px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: darken($blue, 10%);
+                    }
+                    span {
+                        margin-left: 8px;
+                        text-transform: uppercase;
+                    }
+                }
+                .likes {
+                    background-color: $pink;
+                    &:hover {
+                        background-color: darken($pink, 10%);
+                    }
+                }
+                .share {
+                    background-color: $green;
+                    &:hover {
+                        background-color: darken($green, 10%);
+                    }
+                }
+            }
+        }
+        .text {
+            padding: 10px;
+            color: $dark3;
+
+            .blog-card-title {
+                font-weight: 500;
+                padding: 10px 0 4px 0;
+                font-size: 16px;
+                letter-spacing: 0.8px;
+            }
+            .blog-card-madeBy{
+                padding: 2px 0 16px 0;
+                text-transform: uppercase;
+                font-size: 0.7em;
+            }
+        }
+    }
+    .allPosts {
+        padding: 7px 15px;
+        color: $blue;
+        background-color: transparent;
+        border: 1px solid $blue;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s;;
+        &:hover {
+            background-color: $blue;
+            color: $light;
+        }
+    }
+}
