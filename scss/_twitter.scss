@@ -1,0 +1,46 @@
+.twitter {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('./img/twitterBg.png'); 
+    color:$light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    @media(min-width:768px) {
+        padding: 80px 0;
+    }
+    .fa-twitter {
+          font-size: 50px;
+          margin: 30px auto;
+          @media(min-width:768px) {
+          margin: 50px auto;
+          font-size: 68px;
+            
+        }
+      }
+      .twitter-info {
+          font-family: "Roboto", sans-serif;
+          font-size: 24px;
+          text-align: center;
+          line-height: 50px;
+          font-weight:300;
+          margin-bottom: 40px;
+          @media(min-width:768px) {
+            margin-bottom: 60px;
+            font-size: 36px;
+              
+          }
+      }
+      .control {
+          height: 20px;
+          width: 20px;
+          background-color: $dark;
+          display: inline-block;
+          border-radius: 50%;;
+          cursor: pointer;
+          &.active {
+              background-color: $grey3;
+          }
+      }
+    
+}

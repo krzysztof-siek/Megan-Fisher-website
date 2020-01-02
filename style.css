@@ -1260,4 +1260,71 @@ header .heading .title {
 .pricing .pricing-card-container .card .card-content .btn-pricing-three:hover {
   background-color: #479385;
 }
+
+.twitter {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("./img/twitterBg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./img/twitterBg.png");
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .twitter {
+    padding: 80px 0;
+  }
+}
+
+.twitter .fa-twitter {
+  font-size: 50px;
+  margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+  .twitter .fa-twitter {
+    margin: 50px auto;
+    font-size: 68px;
+  }
+}
+
+.twitter .twitter-info {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .twitter .twitter-info {
+    margin-bottom: 60px;
+    font-size: 36px;
+  }
+}
+
+.twitter .control {
+  height: 20px;
+  width: 20px;
+  background-color: #333333;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.twitter .control.active {
+  background-color: #959595;
+}
 /*# sourceMappingURL=style.css.map */
