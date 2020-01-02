@@ -34,7 +34,7 @@ body {
 .btn-primary {
     background-color: $blue;
     color: $light;
-    align-self: flex-start;
+    // align-self: flex-start;
     &:hover {
         background-color: darken($blue, 10%);
     }

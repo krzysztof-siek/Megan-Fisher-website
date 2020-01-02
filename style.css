@@ -49,8 +49,6 @@ body {
 .btn-primary {
   background-color: #2888e2;
   color: #ffffff;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
 .btn-primary:hover {
@@ -422,6 +420,81 @@ header .heading .title {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+
+.advantages {
+  display: -ms-grid;
+  display: grid;
+  background: #202020;
+  background-position: center;
+  background-repeat: no-repeat;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .advantages {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.advantages .adv-info {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 992px) {
+  .advantages .adv-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.advantages .adv-info .info {
+  text-align: left;
+  max-width: 500px;
+}
+
+@media (min-width: 992px) {
+  .advantages .adv-info .info {
+    text-align: right;
+  }
+}
+
+.advantages .adv-info .btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.advantages .adv-img {
+  display: none;
+  background-size: cover;
+  background-position: top center;
+}
+
+@media (min-width: 768px) {
+  .advantages .adv-img {
+    background-image: url("./img/advantage-img.png");
+    display: block;
+  }
 }
 
 .services {
@@ -1005,87 +1078,6 @@ header .heading .title {
   margin-bottom: 100px;
 }
 
-.opinion .opinion-cont {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  position: relative;
-  background-color: transparent;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.opinion .opinion-cont::before {
-  position: absolute;
-  top: 50%;
-  left: -100px;
-  font-size: 30px;
-  content: "<<";
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.opinion .opinion-cont::after {
-  position: absolute;
-  top: 50%;
-  right: -100px;
-  font-size: 30px;
-  content: ">>";
-  color: #2888e2;
-  cursor: pointer;
-}
-
-.opinion .opinion-cont .img-cont {
-  position: relative;
-}
-
-.opinion .opinion-cont .img-cont img {
-  width: 100%;
-  height: 100%;
-}
-
-.opinion .opinion-cont .img-cont:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.opinion .opinion-cont .img-cont:nth-child(3)::after {
-  background-color: transparent;
-}
-
-.opinion .cytat-text {
-  margin-top: 100px;
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-style: italic;
-  line-height: 35px;
-}
-
-.opinion .cytat-text span {
-  font-family: "Roboto", sans-serif;
-  font-size: 50px;
-}
-
-.opinion .cytat-subtext {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.02px;
-  color: #ffffff;
-}
-
-.opinion .cytat-subtext span {
-  color: #2888e2;
-}
-
 .slider-wrapper {
   width: 100%;
   position: relative;
@@ -1093,7 +1085,7 @@ header .heading .title {
 
 @media (min-width: 768px) {
   .slider-wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 }

@@ -122,4 +122,6 @@ let images = [
   next.addEventListener('click', nextSlide)
   prev.addEventListener('click', prevSlide)
 
+//   Koniec slidera
+
 });
