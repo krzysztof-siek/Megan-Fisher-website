@@ -1291,6 +1291,8 @@ header .heading .title {
 .twitter {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("./img/twitterBg.png");
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./img/twitterBg.png");
+  background-position: center;
+  background-size: cover;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1483,6 +1485,193 @@ header .heading .title {
 
 .blog .allPosts:hover {
   background-color: #2888e2;
+  color: #ffffff;
+}
+
+.contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("./img/contactBg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("./img/contactBg.png");
+  background-position: center;
+  background-size: cover;
+  padding: 100px 20px;
+}
+
+.contact .title {
+  color: #ffffff;
+}
+
+.contact .subtitle {
+  color: #ffffff;
+}
+
+.contact .form {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1170px;
+}
+
+.contact .form input, .contact .form textarea {
+  max-width: 500px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  width: 80%;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact .form input::-webkit-input-placeholder, .contact .form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.contact .form input:-ms-input-placeholder, .contact .form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.contact .form input::-ms-input-placeholder, .contact .form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.contact .form input::placeholder, .contact .form textarea::placeholder {
+  color: #ffffff;
+}
+
+.contact .form .email {
+  background-color: #ffffff;
+  background-image: url("../img/emailVerif.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  font-weight: 600;
+  border: none;
+}
+
+.contact .form .email::-webkit-input-placeholder {
+  color: #2888e2;
+}
+
+.contact .form .email:-ms-input-placeholder {
+  color: #2888e2;
+}
+
+.contact .form .email::-ms-input-placeholder {
+  color: #2888e2;
+}
+
+.contact .form .email::placeholder {
+  color: #2888e2;
+}
+
+.contact .fieldsReq {
+  margin-top: 30px;
+  text-align: center;
+  color: #ffd37a;
+  opacity: .7;
+  letter-spacing: 2px;
+}
+
+.footer {
+  background-color: #202020;
+  padding: 100px 20px;
+}
+
+.footer .footer-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .footer .footer-cont {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 50px;
+  }
+}
+
+.footer .footer-cont .recent-container img {
+  width: 49%;
+}
+
+.footer .footer-cont .foot-title {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer .footer-cont .about-text {
+  padding: 15px 0;
+  font-weight: lighter;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  line-height: 30px;
+  text-align: left;
+}
+
+.footer .footer-cont .about-text i {
+  margin-right: 10px;
+  color: #2888e2;
+}
+
+.footer .footer-cont .foot-brand {
+  margin: 20px auto;
+}
+
+.footer .footer-cont .foot-work {
+  margin-bottom: 30px;
+}
+
+.footer .footer-cont .foot-about {
+  color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .footer-cont .foot-about .about-info {
+  font-size: 0.9em;
+  margin-bottom: 30px;
+}
+
+.footer .footer-cont .foot-help .about-text {
+  border: none;
+  line-height: 10px;
+}
+
+.footer .footer-cont .foot-help .socials {
+  color: #959595;
+}
+
+.footer .footer-cont .foot-help .socials i {
+  margin: 10px;
+}
+
+.footer .footer-cont .foot-help .socials i:hover {
   color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
