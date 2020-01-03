@@ -10,8 +10,9 @@
         align-items: center;
         background-color: $light;
         padding-bottom: 50px;
+        transition: .3s;
         &:hover {
-           transform: translateY(-5px);
+           transform: translateY(-2px);
            box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
         }
         .img {

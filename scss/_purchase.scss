@@ -27,8 +27,14 @@
         font-size: 18px;
         color:$light;
         background-color: $blue;
+        margin-bottom: 40px;
         padding:  10px 20px;
         border: 1px solid $light;
         cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: $light;
+            color: $blue;
+        }
     }
 }

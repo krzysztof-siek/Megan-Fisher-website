@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100vw;
   max-width: 1170px;
@@ -526,7 +530,7 @@ header .heading .title {
   left: 50%;
   -webkit-transform: translate(-50%, 50%) rotate(45deg);
           transform: translate(-50%, 50%) rotate(45deg);
-  z-index: 2;
+  z-index: 1;
 }
 
 .services .services-icons {
@@ -1255,9 +1259,17 @@ header .heading .title {
   font-size: 18px;
   color: #ffffff;
   background-color: #2888e2;
+  margin-bottom: 40px;
   padding: 10px 20px;
   border: 1px solid #ffffff;
   cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.purchase .purchase-btn:hover {
+  background-color: #ffffff;
+  color: #2888e2;
 }
 
 .pricing {
@@ -1299,6 +1311,15 @@ header .heading .title {
   margin: 0 auto;
   width: 100%;
   max-width: 350px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.pricing .pricing-card-container .card:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .pricing .pricing-card-container .card .card-title, .pricing .pricing-card-container .card .card-price {
@@ -1386,6 +1407,8 @@ header .heading .title {
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-one {
   background-color: #f5617d;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-one:hover {
@@ -1394,6 +1417,8 @@ header .heading .title {
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-two {
   background-color: #1b76cc;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-two:hover {
@@ -1402,79 +1427,12 @@ header .heading .title {
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-three {
   background-color: #5cb1a1;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .pricing .pricing-card-container .card .card-content .btn-pricing-three:hover {
   background-color: #479385;
-}
-
-.twitter {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("./img/twitterBg.png");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./img/twitterBg.png");
-  background-position: center;
-  background-size: cover;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 0;
-}
-
-@media (min-width: 768px) {
-  .twitter {
-    padding: 80px 0;
-  }
-}
-
-.twitter .fa-twitter {
-  font-size: 50px;
-  margin: 30px auto;
-}
-
-@media (min-width: 768px) {
-  .twitter .fa-twitter {
-    margin: 50px auto;
-    font-size: 68px;
-  }
-}
-
-.twitter .twitter-info {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  text-align: center;
-  line-height: 50px;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 768px) {
-  .twitter .twitter-info {
-    margin-bottom: 60px;
-    font-size: 36px;
-  }
-}
-
-.twitter .control {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #ffffff;
-}
-
-.twitter .control.active {
-  background-color: #ffffff;
 }
 
 .banner-slider {
@@ -1491,7 +1449,7 @@ header .heading .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 100;
+  z-index: 1;
 }
 
 .banner-slider .dots .dot {
@@ -1566,7 +1524,7 @@ header .heading .title {
       flex-shrink: 0;
   width: 100%;
   height: 500px;
-  background-image: url("../img/slide1.png");
+  background-image: url("./img/slide1.png");
   background-size: cover;
   background-position: center;
 }
@@ -1576,7 +1534,7 @@ header .heading .title {
       flex-shrink: 0;
   width: 100%;
   height: 500px;
-  background-image: url("../img/slide2.jpg");
+  background-image: url("./img/slide2.jpg");
   background-size: cover;
   background-position: bottom;
 }
@@ -1586,7 +1544,7 @@ header .heading .title {
       flex-shrink: 0;
   width: 100%;
   height: 500px;
-  background-image: url("../img/slide3.jpg");
+  background-image: url("./img/slide3.jpg");
   background-size: cover;
   background-position: bottom;
 }
@@ -1613,11 +1571,13 @@ header .heading .title {
           align-items: center;
   background-color: #ffffff;
   padding-bottom: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .blog .blog-card:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
