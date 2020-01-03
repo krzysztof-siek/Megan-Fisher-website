@@ -1050,6 +1050,7 @@ header .heading .title {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  padding: 50px 0;
 }
 
 .team .info-container .info {
@@ -1474,6 +1475,120 @@ header .heading .title {
 
 .twitter .control.active {
   background-color: #ffffff;
+}
+
+.banner-slider {
+  height: 500px;
+  position: relative;
+}
+
+.banner-slider .dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+
+.banner-slider .dots .dot {
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.banner-slider .dots .dot.active {
+  background-color: #2888e2;
+}
+
+.banner-slider .banner-wrapper {
+  background-color: coral;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.banner-slider .banner-wrapper .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.banner-slider .banner-wrapper .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.banner-slider .banner-wrapper .slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.banner-slider .banner-wrapper .slide .slide-info {
+  padding: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  z-index: 100;
+  margin-bottom: 80px;
+}
+
+.banner-slider .banner-wrapper .slide1 {
+  top: 0;
+  left: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("../img/slide1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-slider .banner-wrapper .slide2 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("../img/slide2.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-slider .banner-wrapper .slide3 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("../img/slide3.jpg");
+  background-size: cover;
+  background-position: bottom;
 }
 
 .blog {

@@ -139,4 +139,30 @@ let images = [
 
 //   Koniec slidera
 
+// Banner-slider 
+const dots = document.querySelectorAll('.dot');
+
+function changeSlide() {
+    
+    let selectedDots = this.getAttribute("name");    
+    const slides = document.querySelector(".slides");
+    if(selectedDots == "dot1") {  
+    dots.forEach(el => el.classList.remove('active'));
+    dots[0].classList.add('active')
+    slides.style.transform = "translateX(-0%)"        
+    } else if (selectedDots == "dot2") {
+        dots.forEach(el => el.classList.remove('active'));
+        dots[1].classList.add('active')
+        slides.style.transform = "translateX(-100%)"
+    } else if(selectedDots == "dot3") {
+        dots.forEach(el => el.classList.remove('active'));
+        dots[2].classList.add('active')
+        slides.style.transform = "translateX(-200%)"
+    }    
+
+}
+
+
+dots.forEach(el => el.addEventListener('click', changeSlide))
+
 });
