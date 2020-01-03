@@ -10,11 +10,19 @@
         align-items: center;
         background-color: $light;
         padding-bottom: 50px;
+        &:hover {
+           transform: translateY(-5px);
+           box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+        }
         .img {
             width: 100%;
             position: relative;
+            transition: .5s;
+            overflow: hidden;
             img {
                 width: 100%;
+                height: auto;
+                transition: .5s;
             }
             .play-btn {
                 position: absolute;

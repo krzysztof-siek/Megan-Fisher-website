@@ -33,49 +33,64 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     })
 
-//  TO CALE DO DOKONCZENIA, ZEBY POBIERALO INFO Z OSOBNEGO JSONA O OSOBIE I WYSWIETLALO
-//  info-open team card
-// const cards = document.querySelectorAll('.team-card');
+// Team Info person container - change text content in mouseover
+const teamCard1 = document.querySelector('.team-card-1');
+const teamCard2 = document.querySelector('.team-card-2');
+const teamCard3 = document.querySelector('.team-card-3');
 
-// Pobrać każdą kartę osobno żeby łatwiej czytać z której karty jest kliknięcie i text wyświetlać
+changeInfo = (card) => {
+   
+    const infoName = document.querySelector('.info-name');
+    const infoPosition = document.querySelector('.info-position');
+    const photoshop = document.querySelector(".photoshop");
+    const ilustrator = document.querySelector(".ilustrator");
+    const indesign = document.querySelector(".indesign");
+    const photoshopProcent = document.querySelector(".photoshop-procent");
+    const ilustratorProcent = document.querySelector(".ilustrator-procent");
+    const indesignProcent = document.querySelector(".indesign-procent");
+    const text = document.querySelector('.info-container-text');
+    if(card == "card1") {
+        infoName.textContent = "Shanruk Rashid"
+        infoPosition.textContent = "Senior Directour |  Critical Studio"
+        photoshop.style.width = 90 +"%"
+        ilustrator.style.width = 80 +"%"
+        indesign.style.width = 95 +"%"
+        photoshopProcent.textContent = "90%"
+        ilustratorProcent.textContent = "80%"
+        indesignProcent.textContent = "95%"
+        text.textContent = "Shanruk Rashid Senior Directour |  Critical Studio consectetur, adipisicing elit. Deleniti repellat laboriosam laborum nulla vel, autem corporis perspiciatis, doloremque, enim cupiditate minus! Voluptatem impedit ullam tempora sit doloribus quaerat ad quo. ipsum dolor sit, amet consectetur adipisicing elit. Cumque vero officia ipsa, ex error accusantium sed ducimus, doloremque rem ab, repellat eveniet minus iste! Voluptatibus tenetur a distinctio odio maiores?"
+    } else if (card == "card2") {
+        infoName.textContent = "Mohammad Rasel"
+        infoPosition.textContent = "CEO  |  Critical Studio"
+        photoshop.style.width = 80 +"%"
+        ilustrator.style.width = 85 +"%"
+        indesign.style.width = 90 +"%"
+        photoshopProcent.textContent = "80%"
+        ilustratorProcent.textContent = "85%"
+        indesignProcent.textContent = "90%"
+        text.textContent = "Mohammad Rasel CEO  |  Critical Studio consectetur, adipisicing elit. Deleniti repellat laboriosam laborum nulla vel, autem corporis perspiciatis, doloremque, enim cupiditate minus! Voluptatem impedit ullam tempora sit doloribus quaerat ad quo. ipsum dolor sit, amet consectetur adipisicing elit. Cumque vero officia ipsa, ex error accusantium sed ducimus, doloremque rem ab, repellat eveniet minus iste! Voluptatibus tenetur a distinctio odio maiores?"
 
-// hoverIn = (e) => {
-//     const infoCont = document.querySelector('.info-container');
-//     infoCont.classList.add('info-open')
-//     let contText = document.querySelector(".info-cont-text")
-//     console.log(e.target)
-    // if(e.target.classList.value.includes("team-card-3")) {
-    //     contText.textContent = "Tahmid"
-    //     console.log(e.target.classList.value)
-    // } else if(e.target.classList.value.includes("team-card-2")) {
-    //     contText.textContent = "Mohammad"
-    //     console.log(e.target.classList.value)
+    } else if (card == "card3") {
+        infoName.textContent = "Tahmid Hasan"
+        infoPosition.textContent = "Key account manager |  Critical Studio"
+        photoshop.style.width = 90 +"%"
+        ilustrator.style.width = 70 +"%"
+        indesign.style.width = 80 +"%"
+        photoshopProcent.textContent = "90%"
+        ilustratorProcent.textContent = "70%"
+        indesignProcent.textContent = "80%"
+        text.textContent = "Tahmid Hasan Key account manager |  Critical Studio  consectetur, repellat laboriosam laborum nulla vel, autem corporis perspiciatis, doloremque, enim cupiditate minus! Voluptatem impedit ullam tempora sit doloribus quaerat ad quo. ipsum dolor sit, amet consectetur adipisicing elit. Cumque vero officia ipsa, ex error accusantium sed ducimus, doloremque rem ab, repellat eveniet minus iste! Voluptatibus tenetur a distinctio odio maiores?"
 
-    // } else if (e.target.classList.value.includes("team-card-1")) {
-    //     contText.textContent = "Shanruk"
-    //     console.log(e.target.classList.value)
-
-    // } else {
-    //     contText.textContent = "Somethink wrong"
-    //     console.log(e.target.classList.value)
-
-
-    // }
+    }     
+}
     
-// }
-
-// hoverOut = () => {
-//     const infoCont = document.querySelector('.info-container');
-//     infoCont.classList.remove('info-open')
-// }
-
-// cards.forEach(card => card.addEventListener('click', hoverIn));
-// cards.forEach(card => card.addEventListener('mouseout', hoverOut));
-    
-// KONIEC!!!
+    teamCard1.addEventListener('mouseover', () => changeInfo("card1"))
+    teamCard2.addEventListener('mouseover', () => changeInfo("card2"))
+    teamCard3.addEventListener('mouseover', () => changeInfo("card3"))
+// End of info team container
 
 
-// Slider 
+// Slider customers
 let images = [
     "./img/cust-1.png", 
     "./img/cust-2.png", 
