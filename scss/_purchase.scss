@@ -27,11 +27,13 @@
         font-size: 18px;
         color:$light;
         background-color: $blue;
-        margin-bottom: 40px;
         padding:  10px 20px;
         border: 1px solid $light;
         cursor: pointer;
         transition: .3s;
+        @media(min-width:768px){
+            margin-bottom: 40px;
+        }
         &:hover {
             background-color: $light;
             color: $blue;

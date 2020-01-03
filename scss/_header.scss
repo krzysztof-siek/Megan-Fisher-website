@@ -91,7 +91,11 @@ header {
           
             .nav-item {
                 margin: 30px auto;
-                text-align: center;                
+                text-align: center; 
+                &.active a{
+                    color: $blue;
+                    
+                }              
 
                 &:nth-child(7) {
                     display: none;
@@ -136,7 +140,7 @@ header {
                 color: $dark;   
 
                 &.active {
-                    color: $blue;
+                    
                     position: relative;
 
                     &::after {

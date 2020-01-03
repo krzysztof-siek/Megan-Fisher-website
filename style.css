@@ -268,6 +268,10 @@ header nav .nav-links .nav-item {
   text-align: center;
 }
 
+header nav .nav-links .nav-item.active a {
+  color: #2888e2;
+}
+
 header nav .nav-links .nav-item:nth-child(7) {
   display: none;
 }
@@ -314,7 +318,6 @@ header nav .nav-links .nav-link {
 }
 
 header nav .nav-links .nav-link.active {
-  color: #2888e2;
   position: relative;
 }
 
@@ -1259,12 +1262,17 @@ header .heading .title {
   font-size: 18px;
   color: #ffffff;
   background-color: #2888e2;
-  margin-bottom: 40px;
   padding: 10px 20px;
   border: 1px solid #ffffff;
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media (min-width: 768px) {
+  .purchase .purchase-btn {
+    margin-bottom: 40px;
+  }
 }
 
 .purchase .purchase-btn:hover {
@@ -1760,7 +1768,7 @@ header .heading .title {
 
 .contact .form .email {
   background-color: #ffffff;
-  background-image: url("../img/emailVerif.png");
+  background-image: url("./img/emailVerif.png");
   background-position: right;
   background-repeat: no-repeat;
   font-weight: 600;

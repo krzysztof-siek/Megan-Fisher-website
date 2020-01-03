@@ -1,4 +1,8 @@
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
+
+    var spy = new Gumshoe('#nav-links a');
 
     window.addEventListener('resize', () => {
         let windowWidth = window.innerWidth;
@@ -79,7 +83,7 @@ changeInfo = (card) => {
         photoshopProcent.textContent = "90%"
         ilustratorProcent.textContent = "70%"
         indesignProcent.textContent = "80%"
-        text.textContent = "Tahmid Hasan Key account manager |  Critical Studio  consectetur, repellat laboriosam laborum nulla vel, autem corporis perspiciatis, doloremque, enim cupiditate minus! Voluptatem impedit ullam tempora sit doloribus quaerat ad quo. ipsum dolor sit, amet consectetur adipisicing elit. Cumque vero officia ipsa, ex error accusantium sed ducimus, doloremque rem ab, repellat eveniet minus iste! Voluptatibus tenetur a distinctio odio maiores?"
+        text.textContent = "Tahmid Hasan  CEO  |  Critical Studio consectetur, adipisicing elit. Deleniti repellat laboriosam laborum nulla vel, autem corporis perspiciatis, doloremque, enim cupiditate minus! Voluptatem impedit ullam tempora sit doloribus quaerat ad quo. ipsum dolor sit, amet consectetur adipisicing elit. Cumque vero officia ipsa, ex error accusantium sed ducimus, doloremque rem ab, repellat eveniet minus iste! Voluptatibus tenetur a distinctio odio maiores?"
 
     }     
 }
