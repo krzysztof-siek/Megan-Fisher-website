@@ -4,10 +4,14 @@
     .about-info {
         width: 90%;
         max-width: 420px;
+        // padding: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        @media(min-width: 768px) {
+            padding: 30px;
+        }
         
       
         

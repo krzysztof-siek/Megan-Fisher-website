@@ -30,9 +30,10 @@
         padding:  10px 20px;
         border: 1px solid $light;
         cursor: pointer;
+        margin-bottom: 40px;
         transition: .3s;
         @media(min-width:768px){
-            margin-bottom: 40px;
+            margin-bottom: 0;
         }
         &:hover {
             background-color: $light;

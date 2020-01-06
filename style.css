@@ -182,7 +182,7 @@ header nav {
 }
 
 header nav .nav-button {
-  position: static;
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1000;
@@ -409,6 +409,12 @@ header .heading .title {
           align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+  .about .about-info {
+    padding: 30px;
+  }
+}
+
 .about .about-info .btn-primary {
   margin-top: 30px;
   margin-left: 0;
@@ -437,12 +443,15 @@ header .heading .title {
   background-repeat: no-repeat;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  padding: 30px;
+  padding-bottom: 50px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .advantages {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 }
 
@@ -458,20 +467,44 @@ header .heading .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
+  .advantages .adv-info {
+    margin: 0 auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 90%;
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 768px) {
   .advantages .adv-info {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages .adv-info {
+    background-color: red;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    padding: 30px;
   }
 }
 
@@ -489,6 +522,7 @@ header .heading .title {
 .advantages .adv-info .btn-primary {
   display: inline-block;
   margin-top: 20px;
+  margin-left: 0;
 }
 
 .advantages .adv-img {
@@ -1265,13 +1299,14 @@ header .heading .title {
   padding: 10px 20px;
   border: 1px solid #ffffff;
   cursor: pointer;
+  margin-bottom: 40px;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 @media (min-width: 768px) {
   .purchase .purchase-btn {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 
@@ -1881,6 +1916,7 @@ header .heading .title {
 .footer .footer-cont .foot-help .about-text {
   border: none;
   line-height: 10px;
+  cursor: pointer;
 }
 
 .footer .footer-cont .foot-help .socials {
