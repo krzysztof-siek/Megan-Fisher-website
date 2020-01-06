@@ -1,21 +1,23 @@
    .advantages {
     background-color: $dark3;
     color: $light;
+
     @media(min-width: 768px) {
         display: flex;
-
-    }
+        }
     @media(min-width: 1200px) {
-        display: flex;
-        text-align: right;
+        background-image: url('../img/advantage-img.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size:contain;
+      
 
     }
     .adv-info {
-      
     padding: 50px 0 50px 30px;
         width: 90%;
         max-width: 420px;
-        // margin: 0 auto;
+        margin: 0 auto;
         .btn {
             margin: 0;
             margin-top: 30px;
@@ -23,35 +25,43 @@
         @media(min-width:768px) {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-        }
-        @media(min-width:992px) {
-            width: 50%;
+            align-items: flex-start;
             max-width: 1170px;
+
+        }
+        @media(min-width:1200px) {
+            padding: 70px 0;
+          
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            padding: 50px;
-            
+            align-items: flex-start;
+            margin: 0;
+    
+            width: 35%;
+
+        }
+        .title {
+            margin: 0;
+            margin-top: 20px;
+        }
+        .info {
+            margin: 10px;
+            margin-left: 0;
+        }
+        .btn {
+            margin-bottom: 30px;
         }
       
     }
-    .adv-img {
-        display: none;
-        @media(min-width:768px) {
-            display: block;
-            background-image: url('./img/advantage-img.png');
-            width: 50%;
-            background-size: cover;
-            background-position: center;
-        }
+    .limit {
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: 1fr;
+       
+        margin: 0 auto;
     }
-    .info{
-                   text-align: left;
-                   max-width: 500px;
-                 
-                    @media(min-width:992px) {
-                     text-align: right;    
-                         }
+   
+   
+ 
 }
-}
+

@@ -10,7 +10,10 @@
         justify-content: space-between;
         align-items: flex-start;
         @media(min-width: 768px) {
-            padding: 50px;
+            padding: 0 50px ;
+        }
+        @media(min-width: 1200px) {
+            padding: 0;
         }
         
       
